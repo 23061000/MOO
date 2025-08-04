@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تهنئة هويدا</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #181818;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hearts-bg {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .bg-img-animated {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            opacity: 0.18;
+            z-index: 2;
+            pointer-events: none;
+            animation: floatBg 8s ease-in-out infinite alternate;
+        }
+        @keyframes floatBg {
+            0% { transform: scale(1) translateY(0); }
+            100% { transform: scale(1.04) translateY(-18px); }
+        }
+        .love-text-bg {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-10deg);
+            font-size: 3.2rem;
+            color: #fff;
+            opacity: 0.13;
+            font-family: 'Cairo', Arial, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            z-index: 3;
+            pointer-events: none;
+            text-shadow: 0 0 24px #e91e63, 0 0 40px #fff;
+            user-select: none;
+            white-space: nowrap;
+            animation: fadeLove 4s infinite alternate;
+        }
+        @keyframes fadeLove {
+            0% { opacity: 0.10; }
+            100% { opacity: 0.18; }
+        }
+        .greeting {
+            position: relative;
+            z-index: 4;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-size: 2.3rem;
+            padding: 28px 50px 80px 50px;
+            border-radius: 28px;
+            font-family: 'Cairo', Arial, sans-serif;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            border: 2px solid #ffd6e0;
+            text-shadow: 0 2px 12px #e91e63, 0 0 20px #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeInUp 2s cubic-bezier(.68,-0.55,.27,1.55);
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(100px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .greeting .heart-img {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 18px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 16px #e91e63, 0 0 32px #fff2;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: heartBeat 1.5s infinite alternate;
+        }
+        .greeting .heart-img img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            animation: floatHeart 2.5s infinite alternate;
+        }
+        .greeting .floating-img {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            opacity: 0.7;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 0 12px #fff8, 0 0 24px #e91e63;
+            animation: floatSmall 3s infinite alternate, fadeInSmall 2s;
+            z-index: 4;
+            background: #fff;
+        }
+        .greeting .floating-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.18); box-shadow: 0 0 32px #e91e63, 0 0 64px #fff3; }
+        }
+        @keyframes floatHeart {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-12px); }
+        }
+        @keyframes floatSmall {
+            0% { transform: translate(-50%, 0); }
+            100% { transform: translate(-50%, -18px) scale(1.08); }
+        }
+        @keyframes fadeInSmall {
+            0% { opacity: 0; }
+            100% { opacity: 0.7; }
+        }
+        .greeting .text {
+            margin-top: 10px;
+            font-size: 2.1rem;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 0 2px 12px #e91e63, 0 0 20px #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="hearts-bg"></canvas>
+    <img class="bg-img-animated" src="c:/Users/MO hamed/OneDrive/Pictures/WhatsApp Image 2025-08-03 at 10.09.05_86bed057.jpg" alt="خلفية شفافة متحركة" />
+    <div class="love-text-bg">I love you, Boo</div>
+    <div class="greeting">
+        <div class="heart-img">
+            <img src="c:/Users/MO hamed/OneDrive/Pictures/WhatsApp Image 2025-08-03 at 10.09.05_86bed057.jpg" alt="heart image" />
+        </div>
+        <div class="text">الف مليون مبروك يا بو يارب تحققي كل بتمنيه ومن نجاح لي نجاح</div>
+        <div class="floating-img">
+            <img src="c:/Users/MO hamed/OneDrive/Pictures/WhatsApp Image 2025-08-03 at 10.09.05_86bed057.jpg" alt="صورة متحركة صغيرة" />
+        </div>
+        <div style="margin-top: 30px; font-size: 1.1rem; color: #ffd6e0; font-family: 'Cairo', Arial, sans-serif; letter-spacing: 1px; text-shadow: 0 0 8px #e91e63;">
+            Developed by Mohamed Ibrahim
+        </div>
+    </div>
+    <script>
+    // قلوب متحركة في الخلفية
+    const canvas = document.querySelector('.hearts-bg');
+    const ctx = canvas.getContext('2d');
+    let hearts = [];
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    function createHeart() {
+        const size = Math.random() * 24 + 16;
+        return {
+            x: Math.random() * canvas.width,
+            y: canvas.height + size,
+            size: size,
+            speed: Math.random() * 1.2 + 0.5,
+            drift: (Math.random() - 0.5) * 1.2,
+            alpha: Math.random() * 0.5 + 0.5
+        };
+    }
+    function drawHeart(x, y, size, alpha) {
+        ctx.save();
+        ctx.globalAlpha = alpha;
+        ctx.translate(x, y);
+        ctx.scale(size / 32, size / 32);
+        ctx.beginPath();
+        ctx.moveTo(16, 29.6);
+        ctx.bezierCurveTo(16, 29.6, 0, 21.5, 0, 10.4);
+        ctx.bezierCurveTo(0, 4.7, 4.7, 0, 10.4, 0);
+        ctx.bezierCurveTo(13.1, 0, 15.5, 1.3, 16, 3.3);
+        ctx.bezierCurveTo(16.5, 1.3, 18.9, 0, 21.6, 0);
+        ctx.bezierCurveTo(27.3, 0, 32, 4.7, 32, 10.4);
+        ctx.bezierCurveTo(32, 21.5, 16, 29.6, 16, 29.6);
+        ctx.closePath();
+        ctx.fillStyle = '#e91e63';
+        ctx.shadowColor = '#e91e63';
+        ctx.shadowBlur = 16;
+        ctx.fill();
+        ctx.restore();
+    }
+    function drawHearts() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let h of hearts) {
+            drawHeart(h.x, h.y, h.size, h.alpha);
+        }
+    }
+    function updateHearts() {
+        for (let h of hearts) {
+            h.y -= h.speed;
+            h.x += h.drift;
+            h.alpha -= 0.0015;
+        }
+        hearts = hearts.filter(h => h.y + h.size > 0 && h.alpha > 0.1);
+        while (hearts.length < 25) {
+            hearts.push(createHeart());
+        }
+    }
+    function animate() {
+        updateHearts();
+        drawHearts();
+        requestAnimationFrame(animate);
+    }
+    animate();
+    </script>
+</body>
+</html>
